@@ -24,11 +24,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
+        working-directory: ./worksheet2/my-react-app
         run: npm install
 
       - name: Run the tests
+        working-directory: ./worksheet2/my-react-app
         run: npm test
 
       - name: Build
+        working-directory: ./worksheet2/my-react-app
         run: npm run build
     
